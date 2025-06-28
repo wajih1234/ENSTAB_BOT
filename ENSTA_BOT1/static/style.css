@@ -1,0 +1,117 @@
+:root {
+    --primary: #4a89dc;  /* Changed to softer blue */
+    --primary-hover: #3a70c2; /* Darker shade for hover */
+    --user-bg: #4a89dc;  /* User messages (soft blue) */
+    --bot-bg: #f1f5f9;   /* Bot messages (very light gray) */
+    --bot-text: #333;    /* Dark text for bot for readability */
+}
+
+body {
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: 'Segoe UI', Arial, sans-serif; /* More modern font stack */
+}
+
+.chatbox {
+    width: 600px;
+    background: white; /* Changed from light gray to pure white */
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08); /* Softer shadow */
+    overflow: hidden;
+    border: 1px solid #eaeaea; /* Subtle border */
+}
+
+/* Header - kept your structure but refined colors */
+.chatbox__header {
+    background: var(--primary); /* Using new soft blue */
+    color: white;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    font-weight: 500; /* Slightly bolder text */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Added depth */
+}
+
+.chatbox__image--header img {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+    border-radius: 50%; /* Circular avatar */
+}
+
+/* Messages Container */
+.chatbox__messages {
+    padding: 15px 20px;
+    height: 400px; /* Fixed height with scroll */
+    overflow-y: auto;
+    background: white; /* Clean white background */
+}
+
+/* Message Bubbles - Major Improvements */
+.messages__item {
+    margin: 8px 0;
+    padding: 12px 15px;
+    max-width: 80%;
+    line-height: 1.4;
+    font-size: 14px;
+    position: relative;
+    word-wrap: break-word;
+}
+
+/* User Messages (Blue) */
+.messages__item--operator {
+    background: var(--user-bg);
+    color: white;
+    border-radius: 18px 18px 4px 18px; /* More "bubble-like" */
+    margin-left: auto; /* Pushes to right */
+    box-shadow: 0 2px 3px rgba(0,0,0,0.1);
+}
+
+/* Bot Messages (Light Gray) */
+.messages__item--visitor {
+    background: var(--bot-bg);
+    color: var(--bot-text);
+    border-radius: 18px 18px 18px 4px;
+    margin-right: auto; /* Pushes to left */
+    border: 1px solid #e1e1e1; /* Subtle border */
+}
+
+/* Footer - More polished */
+.chatbox__footer {
+    display: flex;
+    padding: 12px;
+    border-top: 1px solid #eee; /* Lighter border */
+    background: #f9f9f9; /* Very light gray */
+}
+
+.chatbox__footer input {
+    flex: 1;
+    padding: 10px 15px;
+    border: 1px solid #ddd;
+    border-radius: 20px; /* Rounded input */
+    outline: none;
+    transition: border 0.3s;
+}
+
+.chatbox__footer input:focus {
+    border-color: var(--primary); /* Blue border on focus */
+}
+
+.chatbox__footer button {
+    background: var(--primary);
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    margin-left: 10px;
+    border-radius: 20px; /* Matches input */
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.chatbox__footer button:hover {
+    background: var(--primary-hover);
+}

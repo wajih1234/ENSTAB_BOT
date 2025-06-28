@@ -1,0 +1,418 @@
+{
+  "intents": [
+    {
+      "tag": "vacances",
+      "patterns": [
+        "Quand sont les vacances d'hiver?",
+        "Quelle est la date des vacances de printemps?",
+        "Y a-t-il des vacances en janvier?",
+        "Peux-tu me dire quand commencent les vacances?",
+        "Quelles sont les dates exactes des vacances scolaires?"
+      ],
+      "responses": [
+        "Les vacances d'hiver S1 sont du 18 au  31 Décembre.",
+        "Les vacances de printemps S2 sont du 21 au 31 Mars."
+      ]
+    },
+    {
+      "tag": "examens",
+      "patterns": [
+        "Quand commencent les examens principaux de s1?",
+        "Dates des examens principaux de s2?",
+        "Quand sont les examens de rattrapage?",
+        "Peux-tu indiquer les dates des examens?",
+        "À quelle période ont lieu les examens finaux?"
+      ],
+      "responses": [
+        "Les examens principaux S1 ont lieu du 22 au 29 janvier.",
+        "Les examens principaux S2 ont lieu du 28 au 30 mai.",
+        "Les examens de rattrapage S2 se déroulent du 23 au 28 juin."
+      ]
+    },
+    {
+      "tag": "deliberations",
+      "patterns": [
+        "Dates des délibérations principales?",
+        "Quand ont lieu les délibérations finales?",
+        "À quelle date se tiennent les délibérations?",
+        "Quand sont prévues les délibérations?",
+        "Pouvez-vous préciser les jours des délibérations?"
+      ],
+      "responses": [
+        "Les délibérations principales S2 ont lieu du 6 au 9 juin.",
+        "Les délibérations finales de l'année se tiennent du 3 au 5 juillet."
+      ]
+    },
+    {
+      "tag": "rentree",
+      "patterns": [
+        "Quand commence l'année universitaire?",
+        "Date de la rentrée universitaire?",
+        "Quand est la rentrée?",
+        "Quelle est la date officielle de rentrée?",
+        "Quand débutent les cours de la nouvelle année?"
+      ],
+      "responses": [
+        "La rentrée universitaire  est prévue pour le 2 septembre."
+      ]
+    },
+    {
+      "tag": "soutenance",
+      "patterns": [
+        "Quand sont les soutenances?",
+        "Date des soutenances PFE?",
+        "Quand ont lieu les soutenances finales?",
+        "Quelles sont les dates pour les soutenances de projet?",
+        "Peux-tu me dire quand auront lieu les soutenances PFE?"
+      ],
+      "responses": [
+        "Les soutenances PFE MA2 se déroulent le 3 octobre."
+      ]
+    },
+    {
+      "tag": "math_info",
+      "patterns": [
+        "Quels sont les matiéres de Math-Info 1 ?",
+        "Parle-moi de l’UE1-1",
+        "Quels sont les matiéres en Mathématiques et Informatique ?",
+        "Quels modules composent Math-Info 1 ?",
+        "Peux-tu me décrire les matières de Math-Info 1 ?"
+      ],
+      "responses": [
+        "L’unité Math-Info 1 comprend : Analyse pour l’ingénieur, Probabilités, Outils numériques pour l’ingénieur 1 : MATLAB, Algorithmique et Programmation."
+      ]
+    },
+    {
+      "tag": "sciences_ingenieur",
+      "patterns": [
+        "Quels sont les matiéres de Sciences de l’ingénieur 1 ?",
+        "Parle-moi de l’UE1-2",
+        "Quels sont les enseignements en Sciences de l’Ingénieur ?",
+        "Liste les modules de Sciences de l’ingénieur 1.",
+        "Quelles disciplines inclut l’UE1-2 ?"
+      ],
+      "responses": [
+        "L’unité Sciences de l’ingénieur 1 comprend : Physique pour l’ingénieur, Mécanique des fluides, Semi-conducteurs."
+      ]
+    },
+    {
+      "tag": "techniques_ingenieur",
+      "patterns": [
+        "Quels sont les cours de Techniques de l’ingénieur 1 ?",
+        "Parle-moi de l’UE1-3",
+        "Quels sont les enseignements en Techniques de l’Ingénieur ?",
+        "Quels modules comprend Techniques de l’ingénieur 1 ?",
+        "Que contient l’unité UE1-3 ?"
+      ],
+      "responses": [
+        "L’unité Techniques de l’ingénieur 1 comprend : Circuits et systèmes électriques, Métrologie pour l’ingénieur, Systèmes mécaniques pour la Robotique."
+      ]
+    },
+    {
+      "tag": "socio_economiques",
+      "patterns": [
+        "Quels sont les cours de Socio-économiques 1 ?",
+        "Parle-moi de l’UE1-4",
+        "Quels sont les enseignements en Sciences Sociales et Économiques ?",
+        "Quels modules sociaux sont enseignés ce semestre ?",
+        "Quels cours figurent dans l’UE1-4 ?"
+      ],
+      "responses": [
+        "L’unité Socio-économiques 1 comprend : Anglais 1, Comptabilité et Gestion d’entreprise, Techniques de communication."
+      ]
+    },
+    {
+      "tag": "regime_examen",
+      "patterns": [
+        "Quel est le régime d’examen pour MATLAB ?",
+        "Comment se passe l’examen de Circuits et systèmes électriques ?",
+        "L’Algorithmique et Programmation a-t-elle un examen mixte ?",
+        "Quel mode d’évaluation pour MATLAB ?",
+        "Quels sont les régimes d’examen pour ces matières ?"
+      ],
+      "responses": [
+        "Les régimes d’examen varient : 'Régime Mixte' pour la plupart des matières techniques, 'Contrôle continu' pour certains cours comme MATLAB et les matières socio-économiques."
+      ]
+    },{
+      
+
+          "tag": "mathématiques_ingénieur2",
+          "patterns": [
+            "Quels sont les cours de Mathématiques pour l'ingénieur2 ?",
+            "Parle-moi de l’UE1-5",
+            "Quels sont les enseignements en Mathématiques pour l'ingénieur2 ?",
+            
+            "Peux-tu me décrire les matières de Mathématiques pour l'ingénieur2 ?"
+          ],
+          "responses": [
+            "L’unité Mathématiques pour l'ingénieur2 comprend : Analyse numérique, Optimisation, Statistiques pour l'ingénieur."
+          ]
+        },
+        {
+          "tag": "outils_digitaux2",
+          "patterns": [
+            "Quels sont les cours d'Outils digitaux pour l'ingénieur 2 ?",
+            "Parle-moi de l’UE1-6",
+            "Quels sont les enseignements en Outils digitaux pour l'ingénieur2 ?",
+            "Quels modules composent cette UE2 ?",
+            "Peux-tu me décrire les matières d'Outils digitaux pour l'ingénieur 2?"
+          ],
+          "responses": [
+            "L’unité Outils digitaux pour l'ingénieur 1 comprend : Introduction à l'Entreprise Resource Planning (ERP), Programmation orientée objet, Outils numériques pour l'ingénieur 2 : CATIA."
+          ]
+        },
+        {
+          "tag": "sciences_ingénieur",
+          "patterns": [
+            "Quels sont les cours de Sciences de l’ingénieur 2 ?",
+            "Parle-moi de l’UE1-7",
+            "Quels sont les enseignements en Sciences de l’ingénieur ?",
+            "Quels modules composent cette UE ?",
+            "Peux-tu me décrire les matières de Sciences de l’ingénieur 2 ?"
+          ],
+          "responses": [
+            "L’unité Sciences de l’ingénieur 2 comprend : Thermodynamique pour l'ingénieur, Électronique des composants, Asservissement et Régulation Industrielle, Projet de synthèse 1."
+          ]
+        },
+        {
+          "tag": "socio_économiques2",
+          "patterns": [
+            "Quels sont les cours de l'UE1-8 Socio-économiques 2 ?",
+            "Parle-moi de l’UE1-8",
+            "Quels sont les enseignements en Socio-économiques ?",
+            "Quels modules composent cette UE ?",
+            "Peux-tu me décrire les matières de Socio-économiques 2 ?"
+          ],
+          "responses": [
+            "L’unité Socio-économiques 2 comprend : Anglais 2, Droit, Philosophie pour l’ingénieur, Économie et économie verte."
+          ]
+        },
+      
+    
+    
+  
+      
+        
+           
+        
+            {
+              "tag": "mathematiques_ingenieur3",
+              "patterns": [
+                "Quels sont les cours de mathématiques pour l'ingénieur 3 ?",
+                "Peux-tu me lister les matières de l'UE2-1 ?",
+                "Donne les modules de Mathématiques pour l’ingénieur 3.",
+                "Quelles disciplines sont incluses dans UE2-1 ?",
+                "Quels enseignements en maths en deuxième année ?"
+              ],
+              "responses": [
+                "Les matières de l'unité *Mathématiques pour l’ingénieur 3* sont : Recherche Opérationnelle 1, Processus Stochastiques et Calcul Scientifique."
+              ]
+            },
+            {
+              "tag": "outils_digitaux3",
+              "patterns": [
+                "Quels cours trouve-t-on dans Outils digitaux pour l’ingénieur 3 ?",
+                "Que comprend l’UE2-2 ?",
+                "Liste les matières d’outils numériques pour l’ingénieur.",
+                "Quels modules numériques sont inclus dans cette unité ?",
+                "Quels sont les enseignements digitaux au semestre 3 ?"
+              ],
+              "responses": [
+                "Les matières de l'unité *Outils digitaux pour l’ingénieur 3* sont : Intelligence Artificielle, Techniques de Traitement d’images, Outils numériques (Linux) et Stage d’initiation."
+              ]
+            },
+            {
+              "tag": "sciences_ingenieur3",
+              "patterns": [
+                "Quels sont les cours de sciences de l’ingénieur au semestre 3 ?",
+                "Que contient exactement l’UE2-3 ?",
+                "Peux-tu me dire les matières de Sciences de l’ingénieur 3 ?",
+                "Quels modules scientifiques sont étudiés ?",
+                "Quels enseignements d’ingénierie sont proposés en deuxième année ?"
+              ],
+              "responses": [
+                "Les matières de l'unité *Sciences de l’ingénieur 3* sont : Résistance des matériaux, Transferts thermiques, Physique des Matériaux et Fonctions de l’électronique."
+              ]
+            },
+            {
+              "tag": "socio_economique3",
+              "patterns": [
+                "Quels cours de socio-économie sont au programme ?",
+                "Donne les matières de l’UE2-4.",
+                "Quels enseignements socio-économiques figurent dans ce semestre ?",
+                "Que comprend l’unité socio-économique 3 ?",
+                "Quels modules liés à l’économie sont proposés ?"
+              ],
+              "responses": [
+                "Les matières de l'unité *Socio-économique 3* sont : Anglais 3, Gestion des projets, Management des équipes ,Option (Langue All. / Jap)."
+              ]
+            },
+            {
+              "tag": "credits_semestre",
+              "patterns": [
+                "Combien de crédits ECTS pour le semestre 3 ?",
+                "Quelle est la répartition des crédits au S3 ?",
+                "Donne-moi le nombre total de crédits pour le semestre.",
+                "Nombre total de crédits pour le troisième semestre ?",
+                "Quel est le total ECTS du semestre 3 ?"
+              ],
+              "responses": [
+                "Le semestre 3 contient un total de 30 crédits ECTS."
+              ]
+            },
+            {
+              "tag": "charge_travail",
+              "patterns": [
+                "Quelle est la charge de travail totale pour le S3 ?",
+                "Combien d’heures sont prévues ce semestre ?",
+                "Peux-tu me dire la charge horaire du semestre 3 ?",
+                "Nombre d’heures globales pour ce semestre ?",
+                "Combien d’heures au total pour le S3 ?"
+              ],
+              "responses": [
+                "La charge totale du semestre 3 est de 450 heures."
+              ]
+            },
+            {
+              "tag": "regime_examen",
+              "patterns": [
+                "Quel est le régime d’examen pour les mathématiques ?",
+                "Comment sont évalués les cours de l’UE2-1 ?",
+                "Régime d’évaluation pour les maths du semestre 3 ?",
+                "Mode d’examen pour l’unité Mathématiques pour l’ingénieur 2 ?",
+                "Les mathématiques sont-elles évaluées en contrôle continu ou mixte ?"
+              ],
+              "responses": [
+                "Le régime d’examen pour l’unité *Mathématiques pour l’ingénieur 2* est en régime mixte."
+              ]
+            },
+            
+                {
+                  "tag": "outils_digitaux_s4",
+                  "patterns": [
+                    "Quels sont les cours d'Outils digitaux pour l’ingénieur 3 en Option SIC ?",
+                    "Pour l'Option SIC, que comprend l'UE2-5 ?",
+                    "Quels modules composent Outils digitaux S4 en SIC ?",
+                    "Que retrouve-t-on dans l'unité Outils numériques 3 pour l'Option SIC ?",
+                    "Pour la 2e année en Option SIC, quels enseignements digitaux au semestre 4 ?"
+                  ],
+                  "responses": [
+                    "Pour l'Option SIC, l'unité Outils digitaux pour l’ingénieur 3 (UE2-5) comprend : Modélisation numérique pour l’ingénieur 4, Automate programmable industriel, et Outils numériques pour l'ing4."
+                  ]
+                },
+                {
+                  "tag": "sciences_ingenieur_s4",
+                  "patterns": [
+                    "Quels sont les cours de Sciences de l’ingénieur 4 en Option SIC ?",
+                    "Parle-moi de l’UE2-6 en Option SIC",
+                    "Quels sont les enseignements scientifiques au semestre 4 pour l'Option SIC ?",
+                    "Que comprend l’unité Sciences de l’ingénieur 4 (SIC) ?",
+                    "Peux-tu me lister les matières de l'UE2-6 en 2e année SIC ?"
+                  ],
+                  "responses": [
+                    "Pour l'Option SIC, l’unité Sciences de l’ingénieur 4 (UE2-6) comprend : Capteurs et Instrumentation,Matériaux avancées et nanocomposite, Electronique pour le  systémes embarquées,projet de synthése 2."
+                  ]
+                },  
+                {
+                  "tag": "socio_economique_s4",
+                  "patterns": [
+                    "Quels sont les cours de Socio-économique 4 en Option SIC ?",
+                    "Parle-moi de l’UE2-7 pour l'Option SIC",
+                    "Quels sont les enseignements socio-économiques du semestre 4 en 2e année ?",
+                    "Que comprend l’unité Socio-économique 4 (SIC) ?",
+                    "Peux-tu me donner la liste des matières de l'UE2-7 pour l'Option SIC ?"
+                  ],
+                  "responses": [
+                    "Pour l'Option SIC, l’unité Socio-économique 4 (UE2-7) comprend : Anglais 4, Option (All. / Jap), Culture entreprenuriale."
+                  ]
+                },
+                {
+                  "tag": "unite_optionnelle_sic_s1",
+                  "patterns": [
+                    "Quels sont les cours de l’unité optionnelle SIC 2 ?",
+                    "Parle-moi de l’UE2-8 en Option SIC",
+                    "Quels sont les enseignements en option SIC au semestre 4 ?",
+                    "Que comprend l’unité optionnelle SIC 2 (S4) ?",
+                    "Peux-tu me lister les modules de l'UE2-8 pour l'Option SIC ?"
+                  ],
+                  "responses": [
+                    "L’unité optionnelle SIC 2 (UE2-8) comprend : Recherche opérationnelle 2,  ERP 2, Mangement des opérations,Six Sigma."
+                  ]
+                },
+                {
+                  "tag": "credits_semestre_4",
+                  "patterns": [
+                    "Combien de crédits ECTS pour le semestre 4 en Option SIC ?",
+                    "Quelle est la répartition des crédits au S4 pour la 2e année SIC ?",
+                    "Donne-moi le nombre total de crédits pour le semestre 4 (Option SIC).",
+                    "Nombre total de crédits pour le quatrième semestre en Option SIC ?",
+                    "Quel est le total ECTS du semestre 4 pour la 2e année Option SIC ?"
+                  ],
+                  "responses": [
+                    "Pour l'Option SIC, le semestre 4 contient un total de 30 crédits ECTS."
+                  ]
+                },
+                {
+                  "tag": "charge_travail_s4",
+                  "patterns": [
+                    "Quelle est la charge de travail totale pour le S4 en Option SIC ?",
+                    "Combien d’heures sont prévues au semestre 4 pour la 2e année SIC ?",
+                    "Peux-tu me dire la charge horaire du semestre 4 Option SIC ?",
+                    "Nombre d’heures globales pour ce semestre 4 en SIC ?",
+                    "Combien d’heures au total pour le S4 (Option SIC) ?"
+                  ],
+                  "responses": [
+                    "La charge totale du semestre 4 en Option SIC est de 450 heures."
+                  ]
+                },
+                {
+                  "tag": "regime_examen_s4",
+                  "patterns": [
+                    "Quel est le régime d’examen pour l’Option SIC au semestre 4 ?",
+                    "Comment sont évalués les cours de l’UE2-5 en Option SIC ?",
+                    "Régime d’évaluation pour le semestre 4 en 2e année SIC ?",
+                    "Mode d’examen pour l’unité Sciences de l’ingénieur 4 en Option SIC ?",
+                    "Les cours du S4 en Option SIC sont-ils évalués en contrôle continu ou mixte ?"
+                  ],
+                  "responses": [
+                    "Pour l'Option SIC, le régime d’examen du semestre 4 est majoritairement un 'Régime Mixte', avec certains cours en Contrôle continu."
+                  ]
+                },
+                {
+                 "tag": "unite_optionnelle_setp_1",
+                "patterns": [
+                     "Quels sont les cours de l’unité optionnelle SETP 1 ?",
+                    "Peux-tu me dire ce qu’on étudie dans l’UE2-8-B en option SETP ?",
+                    "Quels sont les modules de l’unité optionnelle du semestre 4 en SETP ?",
+                    "Parle-moi de l’unité UE2-8-B en option SETP.",
+                   "Que comprend l’unité optionnelle SETP 1 au semestre 4 ?"
+                 ],
+                "responses": [
+                   "L’unité optionnelle SETP 1 (UE2-8-B) comprend les modules suivants : Conversion de l’énergie thermique, Machines électriques et convertisseurs statiques, Mécanique des fluides et machines hydrauliques, et Bilan et dimensionnement des systèmes énergétiques."
+                    ]
+                   },
+                   {
+                    "tag": "unite_optionnelle_ean_s4",
+                    "patterns": [
+                       "Quels sont les cours de l’unité optionnelle EAN 1 ?",
+                       "Parle-moi de l’UE2-8-C en Option EAN",
+                       "Quels sont les enseignements en option EAN au semestre 4 ?",
+                       "Que comprend l’unité optionnelle EAN 1 (S4) ?",
+                       "Peux-tu me lister les modules de l'UE2-8-C pour l'Option EAN ?"
+                   ],
+                 "responses": [
+                  "L’unité optionnelle EAN 1 (UE2-8-C) comprend : Conception des systèmes électroniques, Technologies de fabrication et MEMS, Électronique hyperfréquence, Fabrication et techniques de caractérisation de nanomatériaux et nanocomposites."
+                  ]
+                  }
+             
+
+  
+
+
+              ]
+            }
+            
+        
+        
+    
+  

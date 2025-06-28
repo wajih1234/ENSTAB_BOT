@@ -1,0 +1,154 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    color: #004085; /* Dark blue for better contrast */
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+/* Profile Image */
+.img-box {
+    border-radius: 50%;
+    overflow: hidden;
+    flex-shrink: 0;
+}
+
+/* Headings */
+h1 {
+    font-size: 20px;
+    text-transform: capitalize;
+    color: #0056b3;
+}
+
+/* Profile Section */
+.profil {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+/* Sidebar Menu */
+.menu {
+    background-color: #007BFF; /* Deep blue for a more modern look */
+    width: 20px; /* Slightly wider for better readability */
+    height: 100vh;
+    padding: 20px;
+    overflow: hidden;
+    transition: width 0.3s ease-in-out;
+}
+
+.menu:hover {
+    width: 280px;
+}
+
+/* Navigation Links */
+ul {
+    list-style: none;
+    position: relative;
+    height: 95%;
+}
+
+ul li a {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    padding: 10px;
+    margin: 5px 0px;
+    border-radius: 7px;
+    transition: 0.3s;
+    color: white;
+}
+
+
+ul li a:hover {
+    background-color: #0056b3;
+}
+
+/* Page Background */
+body {
+    background-color: #F8F9FA; /*/* Light background */
+    display: flex;
+}
+.data-info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+/* Data Info Boxes */
+.data-info .box {
+    height: 150px;
+    flex-basis: 150px;
+    background-color: lightblue;
+    flex-grow: 1;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column; /* Ensures title and description are stacked */
+    justify-content: center; /* Center content vertically */
+    align-items: center;     /* Center content horizontally */
+    padding: 10px;
+    text-align: center; /* Center text */
+}
+
+/* Styling for the box title */
+.data-info .box h2 {
+    margin: 0 0 5px;
+    font-size: 18px;
+    color: #333;
+}
+
+/* Styling for the box description */
+.data-info .box p {
+    margin: 0;
+    font-size: 14px;
+    color: #555;
+}
+
+/* Title Bar */
+.title-info {
+    background: linear-gradient(90deg, #007BFF, #0056b3);
+    color: white;
+    padding: 15px;
+    margin: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 8px;
+}
+
+/* Chart Container */
+.chart-container {
+    width: 90%;
+    max-width: 800px;
+    margin: 20px auto;
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Chart Styling */
+#industryChart {
+    width: 100% !important;
+    height: 400px !important;
+}
+
+/* Buttons */
+.button {
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.button:hover {
+    background-color: #0056b3;
+}
+
+   

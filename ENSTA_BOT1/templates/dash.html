@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashbaord</title>
+    
+    <link rel="stylesheet" href="/static/stylesd.css">
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="menu">
+        <ul>
+            <li class="profil">
+                <div class="img-box">
+                    <img src="{{ url_for('static', filename='images/d.png.jpg') }}" width="40px" height="40px">
+                </div>
+              <h1>Nom</h1>
+            </li>
+            <li> <a  href="#">
+                <i class='bx bxs-home'></i>
+                <p>Dashbaord</p>
+
+            </a>
+            </li>
+            <li>
+                <a href="#">
+                    <i class='bx bx-user'></i>
+                    <p>étudiants</p>
+    
+                </a>
+            </li>
+            <li>
+                <a href="https://enstab.tn/">
+                    <i class='bx bxl-product-hunt'></i> 
+                <p>site actuelle</p>
+
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <i class='bx bx-bar-chart-alt-2'></i>
+                    <p>chart</p>
+                </a>
+               
+            </li>
+            
+            
+            <li>
+                <a href="#">
+                    <i class='bx bxs-cog'></i>
+                    <p>settings</p>
+                </a>
+            </li>
+            <li class="log-out">
+                <a href="#">
+                    <i class='bx bxs-log-out-circle' ></i>
+                    <p>déconnecter</p>
+                </a>
+            </li>
+                
+        </ul>
+
+    </div>
+
+    <div class="content">
+        <div class="title-info">
+            <h2>Les options</h2>
+            <i class='bx bxs-bar-chart-square' ></i>
+        </div>
+
+      <div class="data-info">
+        <div class="box">
+            <h2>SIC</h2>
+            <p>L'option SIC forme à l'industrie 4.0, la logistique (Supply Chain, Lean) et l'analyse de données (Big Data, IoT) avec des projets concrets pour
+                 maîtriser les systèmes industriels modernes.</p>
+        </div>
+        <div class="box">
+            <h2>EAN</h2>
+            <p>Formation en électronique avancée (systèmes embarqués, FPGA), nanotechnologies et IoT,
+                 avec des applications en robotique et traitement vidéo, combinant théorie et projets pratiques.</p>
+        </div>
+        <div class="box">
+            <h2>SETP</h2>
+            <p>L'option SETP forme aux énergies propres (solaire, éolienne, biomasse), smart grids, 
+                efficacité énergétique et outils industriels 4.0. Cours techniques + projets concrets pour la transition énergétique.</p>
+        </div>
+        
+       
+      </div>
+      <div class="content">
+        <div class="title-info">
+            <h2>chart</h2>
+            <i class='bx bx-bar-chart-alt-2'></i>
+        </div>
+        <div class="chart-container">
+            <canvas id="industryChart" ></canvas>
+        </div>
+    </div>
+</div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const ctx = document.getElementById('industryChart').getContext('2d');
+        
+        const industryChart = new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: [
+                    'Industrie pétrolière',
+                    'Energies renouvelables',
+                    'Production et distribution d\'électricité',
+                    'Banque – Assurance',
+                    'Recherche, Enseignement',
+                    'IT, digitalisation',
+                    'Industrie automobile',
+                    'Industrie aéronautique',
+                    'Industrie pharmaceutique',
+                    'Informatique, Software'
+                ],
+                datasets: [{
+                    label: 'Pourcentage d\'étudiants par secteur',
+                    data: [19.4, 8.1, 16.1, 14, 14, 14, 14, 14, 14, 14],
+                    backgroundColor: [
+                        'rgba(255, 99, 132, 0.7)',
+                        'rgba(54, 162, 235, 0.7)',
+                        'rgba(255, 206, 86, 0.7)',
+                        'rgba(75, 192, 192, 0.7)',
+                        'rgba(153, 102, 255, 0.7)',
+                        'rgba(255, 159, 64, 0.7)',
+                        'rgba(199, 199, 199, 0.7)',
+                        'rgba(83, 102, 255, 0.7)',
+                        'rgba(40, 159, 64, 0.7)',
+                        'rgba(210, 99, 132, 0.7)'
+                    ],
+                    borderColor: [
+                        'rgba(255, 99, 132, 1)',
+                        'rgba(54, 162, 235, 1)',
+                        'rgba(255, 206, 86, 1)',
+                        'rgba(75, 192, 192, 1)',
+                        'rgba(153, 102, 255, 1)',
+                        'rgba(255, 159, 64, 1)',
+                        'rgba(199, 199, 199, 1)',
+                        'rgba(83, 102, 255, 1)',
+                        'rgba(40, 159, 64, 1)',
+                        'rgba(210, 99, 132, 1)'
+                    ],
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                responsive: true,
+                plugins: {
+                    legend: {
+                        position: 'top',
+                    },
+                    title: {
+                        display: true,
+                        text: 'Répartition des étudiants par secteur industriel'
+                    },
+                    tooltip: {
+                        callbacks: {
+                            label: function(context) {
+                                return context.parsed.y + '%';
+                            }
+                        }
+                    }
+                },
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        title: {
+                            display: true,
+                            text: 'Pourcentage (%)'
+                        },
+                        ticks: {
+                            callback: function(value) {
+                                return value + '%';
+                            }
+                        }
+                    },
+                    x: {
+                        title: {
+                            display: true,
+                            text: 'Secteurs industriels'
+                        }
+                    }
+                }
+            }
+        });
+    });
+</script>
+
+      
+            
+      
+
+    </div>
+    
+</body>
+</html>

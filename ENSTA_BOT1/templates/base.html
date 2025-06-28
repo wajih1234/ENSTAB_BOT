@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+<head>
+    
+    <meta charset="UTF-8">
+    
+    <title>Chatbot</title>
+
+</head>
+<body>
+<div class="container">
+    <div class="chatbox">
+        <div class="chatbox__support">
+            <div class="chatbox__header">
+                <div class="chatbox__image--header">
+                    <img src="data:image/png;base64,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" alt="message-bot"> 
+                </div>
+                <div class="chatbox__content--header">
+                    <h4 class="chatbox__heading--header">Chat support</h4>
+                    <p class="chatbox__description--header">Hi. My name is Enstabot</p>
+                </div>
+            </div>
+            <div class="chatbox__messages">
+                <div></div>
+            </div>
+            <div class="chatbox__footer">
+                <input type="text" placeholder="Write a message...">
+                <button class="chatbox__send--footer send__button">Send</button>
+            </div>
+        </div>
+        <div class="chatbox__button">
+           
+           <a href="/dash.html"> <button> <img src="{{ url_for('static',filename='images/chatb.png') }}" /> </button></a>
+        </div>
+    </div>
+</div>
+   
+    <script>
+        $SCRIPT_ROOT = {{ request.script_root|tojson }};
+    </script>
+    <script type="text/javascript" src="{{ url_for('static', filename='app.js') }}"></script>
+
+</body>
+</html>
