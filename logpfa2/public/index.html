@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link type="image/png" sizes="16x16" rel="icon" href="cht.png">
+    <title>Login page</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+   <div class="login-box">
+      <div class="login-header">
+          <header>Login</header>
+      </div>
+      <form id="loginForm">  
+          <div class="input-box">
+              <input type="email" id="email" class="input-field" placeholder="email" required>
+          </div>
+          <div class="input-box">
+              <input type="password" id="password" class="input-field" placeholder="mot de passe" required>
+          </div>
+          <div class="forgot">
+              <section>
+                  <input type="checkbox" id="check">
+                  <label for="check">Se souvenir</label>
+              </section>
+              <section>
+                  <a href="#">j' ai oublié le mot de passe</a>
+              </section>
+          </div>
+          <div class="input-submit">
+            <button type="submit" class="submit-btn">Se connecter</button>
+          </div>
+      </form>
+      <div class="sign-up-link">
+        <p>Vous n'avez pas de compte ? <a href="insc.html">S'inscrire</a></p>
+      </div>
+   </div>
+
+   <script src="login.js"></script>  
+</body>
+</html>
+
