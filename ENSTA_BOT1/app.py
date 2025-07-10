@@ -13,7 +13,7 @@ CORS(app, resources={
         "allow_headers": ["Authorization", "Content-Type"]
     }
 })
-app.config['SECRET_KEY'] = 'your_jwt_secret'  # Must match Node.js secret
+app.config['SECRET_KEY'] = 'your_jwt_secret'  
 
 # Connect to the  MongoDB
 client = MongoClient("mongodb://localhost:27017/")
