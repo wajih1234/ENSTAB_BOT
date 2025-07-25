@@ -1,6 +1,7 @@
 import random
 import json
 import torch
+import os
 from ENSTA_BOT1.model import NeuralNet
 from ENSTA_BOT1.nltk_utils import bag_of_words, tokenize
 
@@ -10,7 +11,13 @@ warnings.filterwarnings("ignore", category=FutureWarning)
 
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
-with open('intents.json','r',encoding='utf-8') as f:
+
+
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+intents_path = os.path.join(BASE_DIR, 'intents.json')
+
+with open(intents_path, 'r', encoding='utf-8') as f:
+
         intents=json.load(f)
 
 
