@@ -1,6 +1,6 @@
 from flask import Flask, render_template, request, jsonify, redirect, make_response
 import jwt
-from chat import get_response
+from ENSTA_BOT1.chat import get_response
 from flask_cors import CORS
 from pymongo import MongoClient
 from bson.objectid import ObjectId
