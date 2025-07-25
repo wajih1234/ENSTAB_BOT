@@ -4,8 +4,8 @@ import torch
 import torch.nn as nn
 from torch.utils.data import Dataset, DataLoader
 from sklearn.model_selection import train_test_split  # Import for splitting data
-from model import NeuralNet
-from nltk_utils import tokenize, stem, bag_of_words
+from ENSTA_BOT1.model import NeuralNet
+from ENSTA_BOT1.nltk_utils import tokenize, stem, bag_of_words
 
 # Load intents.json
 with open('intents.json', 'r', encoding='utf-8') as f:
