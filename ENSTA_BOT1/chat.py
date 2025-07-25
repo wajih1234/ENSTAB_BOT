@@ -1,10 +1,9 @@
 import random
 import json
 import torch
-from  model import NeuralNet
+from ENSTA_BOT1.model import NeuralNet
+from ENSTA_BOT1.nltk_utils import bag_of_words, tokenize
 
-
-from nltk_utils import bag_of_words ,tokenize 
 import warnings
 warnings.filterwarnings("ignore", category=FutureWarning)
 
