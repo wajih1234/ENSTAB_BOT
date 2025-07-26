@@ -18,7 +18,7 @@ CORS(app, resources={
 app.config['SECRET_KEY'] = 'your_jwt_secret'  
 
 # Connect to the  MongoDB
-client = MongoClient("mongodb://localhost:27017/")
+client = MongoClient("mongodb+srv://cherniwajih4:wajihmadrid1@cluster0.dx1apxy.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0")
 db = client["Database"]
 messages_collection = db["messages"]
 
