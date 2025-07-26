@@ -10,14 +10,14 @@ const app = express();
 
 const corsOptions = {
   origin: [
-    'https://enstab-bot.vercel.app',
-    'http://localhost:8901'
+    'https://enstab-bot.vercel.app', // Your Vercel URL
+    'http://localhost:3000'          // For local development
   ],
   methods: ['GET', 'POST', 'OPTIONS'],
+  credentials: true,
   allowedHeaders: ['Content-Type', 'Authorization']
 };
 app.use(cors(corsOptions));
-
 
 app.use(bodyParser.json());
 app.use(express.static('public'));
