@@ -24,7 +24,7 @@ app.use(express.static('public'));
 app.use(bodyParser.urlencoded({ extended: true }));
 
 // MongoDB Connection
-mongoose.connect('mongodb://localhost:27017/Database');
+mongoose.connect('mongodb+srv://cherniwajih4:<wajih1>@cluster0.dx1apxy.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0');
 
 var db = mongoose.connection;
 db.on('error', () => console.log("Error in Connecting to Database"));
