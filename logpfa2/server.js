@@ -100,7 +100,7 @@ app.post("/login", async (req, res) => {
       success: true,
       message: "Login successful", 
       token,
-      redirectUrl: `http://localhost:5000/chatbot?token=${token}`
+      redirectUrl: `https://enstab-bot.vercel.app/chatbot?token=${token}`
     });
   } catch (error) {
     console.error(error);
