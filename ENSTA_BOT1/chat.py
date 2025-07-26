@@ -23,8 +23,10 @@ with open(intents_path, 'r', encoding='utf-8') as f:
 
 
 
-FILE="data.pth"
-data=torch.load(FILE) 
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))  # goes up one level from ENSTA_BOT1
+FILE = os.path.join(BASE_DIR, "data.pth")
+
+data = torch.load(FILE)
 input_size=data["input_size"] 
 hidden_size=data["hidden_size"]
 output_size=data["output_size"]
