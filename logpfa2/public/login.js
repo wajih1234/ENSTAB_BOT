@@ -5,7 +5,7 @@ document.getElementById("loginForm").addEventListener("submit", async function (
   const password = document.getElementById("password").value;
 
   try {
-    const response = await fetch("http://localhost:8901/login", {
+    const response = await fetch("https://enstab-bot.onrender.com/login", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ email, password }),
@@ -22,7 +22,7 @@ document.getElementById("loginForm").addEventListener("submit", async function (
         
         alert("Connexion réussie !");
         
-        window.location.replace(`http://localhost:5000/chatbot?token=${encodeURIComponent(data.token)}`);
+        window.location.replace(`https://enstab-bot.vercel.app/chatbot?token=${encodeURIComponent(data.token)}`);
       }
       
       
