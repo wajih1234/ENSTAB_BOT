@@ -4,9 +4,12 @@ var mongoose = require("mongoose");
 var bcrypt = require("bcryptjs");
 var jwt = require("jsonwebtoken");
 const cors = require('cors');
-
+const path = require('path')
 
 const app = express();
+app.set('views', path.join(__dirname, 'ENSTA_BOT1/templates'));
+app.engine('html', require('ejs').renderFile); // If you need to render HTML
+
 
 const corsOptions = {
   origin: [
@@ -144,7 +147,7 @@ app.get("/chatbot", (req, res) => {
 
   try {
     jwt.verify(token, "your_jwt_secret");
-    // Serve your chatbot HTML or redirect to frontend
+    // Serve from templates directory
     res.sendFile(path.join(__dirname, "ENSTA_BOT1/templates/base.html"));
   } catch (err) {
     res.redirect("/login?error=invalid_token");
