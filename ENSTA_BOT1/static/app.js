@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', () => {
         new Chatbox();  // Start chat
     } else {
         console.log("No token - redirecting");
-        window.location.href = 'http://localhost:8901';
+        window.location.href = 'https://enstab-bot.vercel.app';
     }
 });
 class Chatbox {
@@ -59,7 +59,7 @@ class Chatbox {
         const userId = "123"; // Use actual userId from authToken or localStorage if needed
         const sender = "user";
 
-       fetch('http://localhost:5000/save-message', {
+       fetch('https://enstab-bot.onrender.com/save-message', {
         method: 'POST',
         body: JSON.stringify({ userId, sender, message: text1 }),
         mode: 'cors',
@@ -70,7 +70,7 @@ class Chatbox {
     })
     
         // Fetch bot response with token
-        fetch('http://127.0.0.1:5000/predict', {
+        fetch('https://enstab-bot.onrender.com/predict', {
             method: 'POST',
             body: JSON.stringify({ message: text1 }),
             mode: 'cors',
@@ -92,7 +92,7 @@ class Chatbox {
             console.error('Error:', error);
             if (error.message.includes('Unauthorized')) { //  ADDED
                 localStorage.removeItem('authToken');
-                window.location.href = 'http://localhost:8901';
+                window.location.href = 'https://enstab-bot.vercel.app';
             } else {
                 let errorMsg = { 
                     name: "Enstabot", 
