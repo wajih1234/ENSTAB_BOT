@@ -9,11 +9,12 @@ import datetime
 app = Flask(__name__)
 CORS(app, resources={
     r"/predict": {
-        "origins": [https://enstab-bot.vercel.app",
+        "origins": [https://enstab-bot.vercel.app","http://localhost:3000",
             "http://localhost:5000", "http://127.0.0.1:5000"],
         "allow_headers": ["Authorization", "Content-Type"]
     }
 })
+
 app.config['SECRET_KEY'] = 'your_jwt_secret'  
 
 # Connect to the  MongoDB
@@ -46,13 +47,13 @@ def chatbot_get():
     # If still no token, redirect to login
     if not token:
         print("❌ No token found")
-        return redirect('http://localhost:8901')
+        return redirect('https://enstab-bot.vercel.app')
     print(f"\n🔑 Current secret key: '{app.config['SECRET_KEY']}'")
     # Verify the token
     token_verification = verify_token(token)
     if isinstance(token_verification, str):  # <- FIXED INDENTATION
         print(f"🔴 Token verification failed: {token_verification}")  # Debug
-        return redirect('http://localhost:8901')
+        return redirect('https://enstab-bot.vercel.app')
     
     # Token is valid - render chatbot page
     response = make_response(render_template('base.html'))
@@ -132,7 +133,7 @@ def home():
     token = request.cookies.get('authToken')
     if token and not isinstance(verify_token(token), str):
         return redirect('/chatbot')
-    return redirect('http://localhost:8901')
+    return redirect('https://enstab-bot.vercel.app')
 
 if __name__ == '__main__':
     app.run(port=5000, debug=True)
