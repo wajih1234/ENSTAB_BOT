@@ -22,7 +22,7 @@ document.getElementById("loginForm").addEventListener("submit", async function (
         
         alert("Connexion réussie !");
         
-        window.location.replace(`https://enstab-bot.vercel.app/chatbot?token=${encodeURIComponent(data.token)}`);
+        window.location.replace(`https://enstab-bot.onrender.com/chatbot?token=${encodeURIComponent(data.token)}`);
       }
       
       
