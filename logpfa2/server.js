@@ -7,7 +7,17 @@ const cors = require('cors');
 
 
 const app = express();
-app.use(cors());
+
+const corsOptions = {
+  origin: [
+    'https://enstab-bot.vercel.app',
+    'http://localhost:8901'
+  ],
+  methods: ['GET', 'POST', 'OPTIONS'],
+  allowedHeaders: ['Content-Type', 'Authorization']
+};
+app.use(cors(corsOptions));
+
 
 app.use(bodyParser.json());
 app.use(express.static('public'));
