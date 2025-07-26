@@ -132,6 +132,39 @@ app.get("/messages/:userId", async (req, res) => {
     res.status(500).json({ error: "Error fetching messages" });
   }
 });
+// Add these new routes to your existing server.js:
+
+// Chatbot page route
+app.get("/chatbot", (req, res) => {
+  const token = req.cookies.authToken || req.query.token;
+  
+  if (!token) {
+    return res.redirect("/login");
+  }
+
+  try {
+    jwt.verify(token, "your_jwt_secret");
+    // Serve your chatbot HTML or redirect to frontend
+    res.sendFile(path.join(__dirname, "ENSTA_BOT1/templates/base.html"));
+  } catch (err) {
+    res.redirect("/login?error=invalid_token");
+  }
+});
+
+// Predict route (from Flask)
+app.post("/predict", async (req, res) => {
+  const token = req.cookies.authToken || req.headers.authorization?.split(' ')[1];
+  
+  if (!token) return res.status(401).json({ error: "Unauthorized" });
+
+  try {
+    const decoded = jwt.verify(token, "your_jwt_secret");
+    // Add your prediction logic here
+    res.json({ answer: "Bot response" });
+  } catch (err) {
+    res.status(401).json({ error: "Invalid token" });
+  }
+});
 
 
 
