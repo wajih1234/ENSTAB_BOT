@@ -7,10 +7,7 @@ const cors = require('cors');
 const path = require('path')
 
 const app = express();
-app.set('views', path.join(__dirname, 'ENSTA_BOT1/templates'));
-app.engine('html', require('ejs').renderFile); // If you need to render HTML
-
-
+app.use('/chatbot', express.static(path.join(__dirname, 'ENSTA_BOT1/templates'))); // For chatbot files
 const corsOptions = {
   origin: [
     'https://enstab-bot.vercel.app', // Your Vercel URL
