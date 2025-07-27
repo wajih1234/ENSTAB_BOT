@@ -10,8 +10,8 @@ const app = express();
 app.use('/chatbot', express.static(path.join(__dirname, 'ENSTA_BOT1/templates'))); // For chatbot files
 const corsOptions = {
   origin: [
-    'https://enstab-bot.vercel.app', // Your Vercel URL
-    'http://localhost:3000'          // For local development
+    'https://enstab-bot.vercel.app', 
+    'http://localhost:3000'          
   ],
   methods: ['GET', 'POST', 'OPTIONS'],
   credentials: true,
