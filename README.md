@@ -54,7 +54,7 @@ python train.py
 
 
 cd logpfa2
-node server.js or nodemon start
+node server.js or nodemon server.js
 ## run the flask backend
 cd ENSTA_BOT1
 python app.py
